@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   font-family: 'Kanit', sans-serif;
+    line-height:1.5;
+    height:100vh;
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0; 
+    background-color: #f9f6f2; 
+    z-index: 1;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    margin: 0 50px;
+}
+nav p{
+    text-transform: capitalize;
+    font-size: 22px;
+}
+.food-container{
+    width:90%;
+    margin: 0 auto;
+}
+p.about-man{
+    padding: 0.67em 0.45em;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1.1px;
+    line-height: 30px;
+}
+
+.home-link {
+    background-color: #d1d1d1; 
+  }
+  
+  .food-link {
+    background-color: #e1dbd6; 
+  }
+  
+  .about-link {
+    background-color: #e2e2e2; 
+  }  
+
+.sidenav{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left:0;
+    width:50%;
+    height: 100%;
+    background-color: #f9f6f2; 
+    box-shadow: 2px 0 2px 2px rgba(0,0,0,0.3);
+    align-items: center;
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+}
+.sidenav.is-active{
+    transform: translateX(0);
+}
+
+.sidenav a{
+    display: block;
+    width: 100%;
+    padding:0.78em 1.6em 1.4em 1.6em;
+    text-decoration: none;
+    font-size: 1.7em;
+    text-transform: capitalize;
+    color: hsl(0, 100%, 1%);
+}
+.sidenav a:focus,
+.sidenav a:hover{
+    background-color: #8f7b7b;
+    color: #ffffff;
+}
+.close-btn{
+    font-size: 50px;
+    color: #000000;
+    margin-right: 10px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 1em;
+    cursor: pointer;
+}
+h1{
+    font-weight: 300;
+    font-size: 18px;
+}
+h2{
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.5em 0;
+    line-height: 36px;
+}
+.bars{
+    cursor:pointer; 
+}
+hr{
+    opacity: 0.3;
+}
+.food-menu{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-gap:15px; 
+    width: 100%;
+    align-items: center;
+    margin-top:5em; 
+    z-index: -1;
+}
+.menu-img{
+    width: 100%;
+}
+.menu-img img{
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: auto;
+}
+.food-description p{
+    font-size: 15px;
+    text-align: center;
+    padding: 0.6em 1em;
+}
+.btn{
+   text-align: center;
+   padding: 0.78em 0;
+}
+.btn span{
+    display: inline-block;
+    padding: 0.5em 0.78em;
+    padding: 0.78em 0;
+}
+span.active{
+    background-color:#000;
+    color:#fff;
+}
+.active:hover,
+.active:focus{
+    background-color: #ccc;
+    color: #000;
+}
+.btn span:focus,
+.btn span:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/******************about*********************/
+.about{
+    width:75%;
+    margin: 1.4em auto;
+    text-align: center;
+}
+.about h1{
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    padding-bottom: 1em;
+}
+.about img{
+    width: 100%;
+    height: auto;
+}
+
+.about p{
+    font-style: italic;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:15px;
+}
+footer h1,.blog-post h1{
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em 0;
+}
+footer p{
+    padding: 0.67em;
+    font-size:16px;
+}
+footer a{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    padding: 0.67em;
+    color:#444;
+}
+.blog{
+    display: flex;
+    justify-content: center;
+    
+}
+.blog img{
+    width:50px;
+    height: 50px;
+    margin-bottom: 1em;
+}
+.blog p{
+    margin-left: 12px;
+}
+
+/*media query */
+           
+@media (max-width:992px){
+    h2{
+        font-size: 18px;
+        line-height:26px; 
+    }
+    .food-description p{
+        font-size: 14px;
+        padding: 0;
+    }
+}
+@media (max-width:768px){
+    .food-menu{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:2px;   
+    }
+    
+    p.about-man{
+    font-size: 15px;
+    text-align: left;
+}
+@media (max-width:576px){
+    .food-menu{
+    display: grid;
+    grid-template-columns:repeat(1,1fr);
+    grid-gap:2px;   
+    }
+    p.about-man{
+    font-size: 15px;
+    text-align: left;
+    }
+    .sidenav a{
+        font-size: 20px;
+    }
+    .footer{
+        grid-template-columns:1fr;
+    }
+    .blog-post{
+        order: 1;
+    }
+}
+}
